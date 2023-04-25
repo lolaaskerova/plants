@@ -1,0 +1,95 @@
+@import "../../../vendors/variables";
+@import "../../../vendors/mixins";
+.hero {
+  background-color: $lightgray;
+  border-top: 0.5px solid lightgray;
+  .hero-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    @media (max-width: 767px) {
+      flex-direction: column-reverse;
+      @include flexCenter;
+      padding: 40px 0px;
+    }
+    .hero-left-side {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 20px;
+      @media (max-width: 767px) {
+        align-items: center;
+      }
+      .titles {
+        @media (max-width: 767px) {
+          text-align: center;
+        }
+        h3 {
+          font-family: $second-font, serif;
+          color: $main-gray;
+          font-weight: 100;
+        }
+        h1 {
+          font-size: 55px;
+          font-family: $second-font;
+          max-width: 500px;
+          font-weight: 100;
+          @media (max-width: 1115px) {
+            font-size: 47px;
+          }
+          @media (max-width: 767px) {
+            max-width: 100%;
+          }
+        }
+        p {
+          font-family: $font-family;
+          font-weight: 500;
+          color: $main-gray;
+        }
+      }
+      .price {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        del,
+        span {
+          color: $main-gray;
+          font-weight: 500;
+          font-family: $font-family;
+        }
+        button {
+          margin-left: 20px;
+          padding: 10px 30px;
+          font-family: $font-family;
+          font-weight: 500;
+          letter-spacing: 0.5px;
+          background-color: $main-gray;
+          color: $white;
+          border: none;
+          transition: 0.3s all;
+          cursor: pointer;
+          text-transform: uppercase;
+          &:hover {
+            background-color: gray;
+          }
+          @media (max-width: 767px) {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    .hero-right-side {
+      width: 50%;
+      height: 50%;
+      @media (max-width: 767px) {
+        width: 90%;
+        height: 90%;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
