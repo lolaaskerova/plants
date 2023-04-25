@@ -1,0 +1,139 @@
+@import "../../../vendors/variables";
+@import "../../../vendors/mixins";
+
+.most-popular {
+  padding: 50px 0px;
+  .titles {
+    text-align: center;
+    h4 {
+      color: $main-gray;
+      font-weight: 100;
+      font-family: $second-font;
+    }
+    h1 {
+      font-size: 40px;
+      font-family: $second-font;
+      color: $black;
+      font-weight: 100;
+    }
+  }
+  .row {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    @media (max-width: 1018px) {
+      gap: 10px;
+    }
+    .card {
+      max-width: 350px;
+      height: 400px;
+      @media (max-width: 1115px) {
+        height: 300px;
+      }
+      @media (max-width: 900px) {
+        height: 250px;
+      }
+      @media (max-width: 767px) {
+        width: 100%;
+        height: 100%;
+      }
+
+      .image {
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+        #sale {
+          font-family: $font-family;
+          width: 50px;
+          height: 25px;
+          border-radius: 30px;
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          font-weight: 500;
+          color: $main-gray;
+          font-size: 15px;
+          background-color: $white;
+          text-align: center;
+          @include flexCenter;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+            rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+        .icons {
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          top: 20px;
+          right: 20px;
+          visibility: hidden;
+          opacity: 0;
+          transition: 0.3s all ease;
+          svg {
+            cursor: pointer;
+            width: 27px;
+            height: 27px;
+            border-radius: 25px;
+            background-color: $white;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            color: $main-gray;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+              rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          }
+        }
+        &:hover {
+          .icons {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+      }
+      .card-content {
+        padding: 10px;
+        position: relative;
+        z-index: 999;
+        span {
+          color: $main-gray;
+          font-family: $font-family;
+          font-weight: 500;
+          @media (max-width: 900px) {
+            font-size: 15px;
+          }
+        }
+        h2 {
+          font-family: $second-font;
+          color: $black;
+          font-weight: 100;
+          @media (max-width: 900px) {
+            font-size: 19px;
+          }
+        }
+        .svg > * {
+          color: $main-gray;
+        }
+        .price {
+          display: flex;
+          gap: 5px;
+          > * {
+            color: $main-gray;
+            font-family: $font-family;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}
