@@ -106,6 +106,9 @@
         }
         .card-titles {
           padding: 15px;
+          svg {
+            color: $main-gray;
+          }
           span {
             color: $main-gray;
             font-family: $font-family;

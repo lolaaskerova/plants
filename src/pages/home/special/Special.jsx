@@ -3,6 +3,7 @@ import plantImg from "../../../assets/images/plantImg.jpg";
 import aloe from "../../../assets/images/aloe.jpg";
 import { BsFillBasketFill } from "react-icons/bs";
 import { FaEye } from "react-icons/fa";
+import { AiOutlineStar } from "react-icons/ai";
 
 import "./Special.scss";
 const Special = () => {
@@ -28,6 +29,11 @@ const Special = () => {
             <div className="card-titles">
               <span>Cacti</span>
               <h2>Aloe Juvenna Plant</h2>
+              <AiOutlineStar />
+              <AiOutlineStar />
+              <AiOutlineStar />
+              <AiOutlineStar />
+              <AiOutlineStar />
               <h5>$85.00</h5>
             </div>
           </div>
