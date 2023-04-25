@@ -1,0 +1,49 @@
+@import "../../../vendors/variables";
+
+.hamburger-menu {
+  background-color: $white;
+  z-index: 999;
+  position: sticky;
+  padding: 50px 0px;
+  .exit {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    &:hover {
+      color: $main-gray;
+    }
+  }
+  .hamburger-content {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .account {
+      font-size: 25px;
+      padding-left: 20px;
+    }
+    .pages {
+      ul {
+        list-style: none;
+
+        li {
+          padding: 25px 20px;
+          background-color: lightgray;
+          border: 1px solid lightgray;
+          a {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: $font-family;
+            font-weight: 500;
+            color: $black;
+            &:hover {
+              color: $main-gray;
+            }
+          }
+        }
+      }
+    }
+  }
+}

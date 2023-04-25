@@ -1,0 +1,84 @@
+@import "../../vendors/variables";
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0px;
+  .nav-link {
+    @media (max-width: 918px) {
+      display: none;
+    }
+  }
+  .nav-left-side {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    a {
+      font-family: $font-family;
+      text-transform: uppercase;
+      font-weight: 500;
+      text-decoration: none;
+      color: $black;
+      transition: 0.1s all;
+
+      &:hover {
+        color: $main-gray;
+      }
+    }
+  }
+  .nav-right-side {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    .hamburger {
+      display: none;
+      margin-left: 10px;
+      color: $main-gray;
+      cursor: pointer;
+      @media (max-width: 918px) {
+        display: block;
+      }
+    }
+    a {
+      font-family: $font-family;
+      text-transform: uppercase;
+      font-weight: 500;
+      text-decoration: none;
+      color: $black;
+      transition: 0.1s all;
+      &:hover {
+        color: $main-gray;
+      }
+    }
+    .cart {
+      position: relative;
+      color: $main-gray;
+      span {
+        vertical-align: super;
+        font-size: 10px;
+        line-height: 0;
+        top: -0.8em;
+        right: -14px;
+        color: $white;
+        background: $main-gray;
+        border-radius: 50%;
+        position: absolute;
+        height: 17px;
+        text-align: center;
+        width: 17px;
+        padding-top: 8px;
+      }
+    }
+    .account {
+      svg {
+        font-size: 22px;
+      }
+      @media (max-width: 918px) {
+        display: none;
+      }
+    }
+  }
+}
+.hamburger {
+  display: none;
+}
