@@ -1,0 +1,139 @@
+@import "../../vendors/variables";
+
+footer {
+  background-color: $lightgray;
+  .footer {
+    padding: 60px 50px;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 1030px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+    }
+    .logo {
+      @media (max-width: 1030px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      img {
+        margin-bottom: 50px;
+      }
+      p {
+        max-width: 250px;
+        color: $main-gray;
+        font-family: $font-family;
+        font-weight: 500;
+        @media (max-width: 1030px) {
+          max-width: 100%;
+          text-align: center;
+        }
+      }
+    }
+    .pages {
+      @media (max-width: 1030px) {
+        text-align: center;
+      }
+
+      h2 {
+        color: $black;
+        font-weight: 100;
+        font-family: $second-font;
+        margin-bottom: 20px;
+        @media (max-width: 1030px) {
+          text-align: center;
+        }
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        li {
+          a {
+            text-decoration: none;
+            color: $main-gray;
+            font-weight: 500;
+            font-family: $font-family;
+          }
+        }
+      }
+    }
+    .socials {
+      h2 {
+        color: $black;
+        font-weight: 100;
+        font-family: $second-font;
+        margin-bottom: 20px;
+        @media (max-width: 1030px) {
+          text-align: center;
+        }
+      }
+
+      .svg {
+        display: flex;
+        gap: 10px;
+        svg {
+          width: 30px;
+          height: 30px;
+          background-color: $white;
+          color: $black;
+          display: flex;
+          align-items: center;
+          padding: 5px;
+          border-radius: 50%;
+          transition: 100ms all ease;
+          &:hover {
+            color: $main-gray;
+          }
+        }
+      }
+    }
+    .subscribe {
+      h2 {
+        color: $black;
+        font-weight: 100;
+        font-family: $second-font;
+        margin-bottom: 20px;
+        @media (max-width: 1030px) {
+          text-align: center;
+        }
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        @media (max-width: 1030px) {
+          align-items: center;
+          justify-content: center;
+        }
+        input {
+          padding: 15px;
+          border: 0.3px solid lightgray;
+          color: $main-gray;
+          font-family: $font-family;
+          font-weight: 500;
+          outline: none;
+          @media (max-width: 1030px) {
+            width: 100%;
+          }
+        }
+        button {
+          width: 50%;
+          text-transform: uppercase;
+          padding: 15px 10px;
+          border: none;
+          background-color: $main-gray;
+          color: $white;
+          cursor: pointer;
+          @media (max-width: 1030px) {
+            width: 60%;
+          }
+        }
+      }
+    }
+  }
+}
