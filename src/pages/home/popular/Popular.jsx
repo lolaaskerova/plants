@@ -17,7 +17,7 @@ const Popular = () => {
           d.oldPrice ? (
             <div key={d.id} className=" card">
               <div className="image">
-                <img src={d.image} alt="image" />
+                <img src={d.image} alt="logo" />
                 <span id="sale">Sale!</span>
 
                 <div className="icons">
