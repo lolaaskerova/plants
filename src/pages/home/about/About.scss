@@ -1,0 +1,11 @@
+.about {
+  padding: 80px 30px;
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+}

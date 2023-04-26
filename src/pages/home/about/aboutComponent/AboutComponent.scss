@@ -1,0 +1,58 @@
+@import "../../../../vendors/variables";
+@import "../../../../vendors/mixins";
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  @media (max-width: 900px) {
+    justify-content: center;
+    align-items: center;
+  }
+  .img {
+    width: 15%;
+    height: 40px;
+    background-color: $main-gray;
+    @include flexCenter;
+    border-radius: 50%;
+    @media (max-width: 1115px) {
+      width: 20%;
+    }
+    @media (max-width: 900px) {
+      width: 6%;
+    }
+    @media (max-width: 700px) {
+      width: 8%;
+    }
+    @media (max-width: 600px) {
+      width: 9%;
+    }
+    @media (max-width: 500px) {
+      width: 14%;
+    }
+    svg {
+      color: $white;
+      font-size: 20px;
+    }
+  }
+  .title {
+    @media (max-width: 900px) {
+      text-align: center;
+    }
+    h2 {
+      color: $black;
+      font-family: $second-font;
+      font-weight: 100;
+      margin-bottom: 10px;
+    }
+    p {
+      color: $main-gray;
+      font-family: $font-family;
+      font-weight: 500;
+      max-width: 90%;
+      @media (max-width: 900px) {
+        max-width: 100%;
+      }
+    }
+  }
+}
