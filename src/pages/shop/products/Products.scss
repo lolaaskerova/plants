@@ -98,6 +98,10 @@
         visibility: hidden;
         opacity: 0;
         transition: 0.3s all ease;
+        @media (max-width: 500px) {
+          visibility: visible;
+          opacity: 1;
+        }
         svg {
           cursor: pointer;
           width: 27px;
