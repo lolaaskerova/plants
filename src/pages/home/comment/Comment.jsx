@@ -1,23 +1,21 @@
 import React from "react";
-import testimonial from "../../../assets/images/testimonial.jpg";
 import "./Comment.scss";
+import { comment } from "../../../data/data";
 
 const Comment = () => {
   return (
     <div className="container testimonial">
-      <div className="comment">
-        <div className="photo">
-          <img src={testimonial} alt="comment" />
+      {comment.map((c) => (
+        <div className="comment" key={c.id}>
+          <div className="photo">
+            <img src={c.profile} alt="comment" />
+          </div>
+          <div className="comment-content">
+            <h1>{c.comment}</h1>
+            <h4>{c.name}</h4>
+          </div>
         </div>
-        <div className="comment-content">
-          <h1>
-            “ Really good service and good quality plants, lorem ipsum dolor sit
-            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua quis ipsum! ”
-          </h1>
-          <h4>Maria Oliver</h4>
-        </div>
-      </div>
+      ))}
     </div>
   );
 };
