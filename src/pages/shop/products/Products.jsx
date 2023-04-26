@@ -21,9 +21,6 @@ const Products = () => {
   let filter = {
     display: "block",
   };
-  let inacFilter = {
-    display: "none",
-  };
   //sort by price
   const sortByPrice = (e) => {
     if (e.target.value === "high") {
@@ -76,7 +73,7 @@ const Products = () => {
           {products.map((d, index) => (
             <div key={index} className=" card">
               <div className="image">
-                <img src={d.image} alt="image" />
+                <img src={d.image} alt="green" />
                 {d.oldPrice ? <span id="sale">Sale!</span> : <></>}
                 <div className="icons">
                   <BsFillBasketFill onClick={() => dispatch(addToCart(d))} />

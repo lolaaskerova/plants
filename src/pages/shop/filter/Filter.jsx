@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Filter.scss";
 import { MdOutlineCancel } from "react-icons/md";
 import cacti from "../../../assets/images/cacti.jpg";
