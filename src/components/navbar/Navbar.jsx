@@ -6,14 +6,24 @@ import { BsFillBasketFill } from "react-icons/bs";
 import { RiAccountCircleFill } from "react-icons/ri";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Hamburger from "./hamburger/Hamburger";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
+  const cart = useSelector((state) => state.cart);
   const [toggle, setToggle] = useState(false);
   let inactiveNav = {
     display: "none",
   };
   let activeHamburger = {
     display: "block",
+  };
+
+  const getTotalQuantity = () => {
+    let total = 0;
+    cart.cart.forEach((item) => {
+      total += item.quantity;
+    });
+    return total;
   };
   return (
     <>
@@ -29,7 +39,7 @@ const Navbar = () => {
             plants
           </Link>
           <Link className="nav-link" to="cactus">
-            cactus
+            cacti
           </Link>
         </div>
         <div className="nav-right-side">
@@ -40,7 +50,7 @@ const Navbar = () => {
             questions?
           </Link>
           <Link className="cart" to="cart">
-            <BsFillBasketFill /> <span>0</span>
+            <BsFillBasketFill /> <span>{getTotalQuantity()}</span>
           </Link>
           <Link className="account" to="account">
             <RiAccountCircleFill />

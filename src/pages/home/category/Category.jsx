@@ -11,7 +11,6 @@ const Category = () => {
         </div>
         <div className="title">
           <h4>Cacti</h4>
-          <h5>4 products</h5>
         </div>
       </div>
       <div className="right-side">
@@ -19,7 +18,6 @@ const Category = () => {
           <img src={plant} alt="img" />
           <div className="title">
             <h4>Plants</h4>
-            <h5>4 products</h5>
           </div>
         </div>
       </div>

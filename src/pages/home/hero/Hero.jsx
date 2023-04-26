@@ -1,11 +1,17 @@
 import React from "react";
 import hero from "../../../assets/images/hero.png";
+import { motion } from "framer-motion";
 import "./Hero.scss";
 const Hero = () => {
   return (
     <div className="hero">
       <div className="container hero-content">
-        <div className="hero-left-side">
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, type: "plant" }}
+          className="hero-left-side"
+        >
           <div className="titles">
             <h3>Plants</h3>
             <h1>Bird of Paradise Plant</h1>
@@ -19,7 +25,7 @@ const Hero = () => {
             <span>$50.00</span>
             <button>add to cart</button>
           </div>
-        </div>
+        </motion.div>
         <div className="hero-right-side">
           <img src={hero} alt="hero" />
         </div>

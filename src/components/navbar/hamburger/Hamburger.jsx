@@ -14,24 +14,36 @@ const Hamburger = ({ toggle, setToggle }) => {
       </div>
       <div className="hamburger-content">
         <div className="account">
-          <RiAccountCircleFill />
+          <Link to="account" onClick={() => setToggle(!toggle)}>
+            <RiAccountCircleFill />
+          </Link>
         </div>
         <div className="pages">
           <ul>
             <li>
-              <Link>shop all</Link>
+              <Link to="shop" onClick={() => setToggle(!toggle)}>
+                shop all
+              </Link>
             </li>
             <li>
-              <Link>plants</Link>
+              <Link to="plant" onClick={() => setToggle(!toggle)}>
+                plants
+              </Link>
             </li>
             <li>
-              <Link>cactus</Link>
+              <Link to="cactus" onClick={() => setToggle(!toggle)}>
+                cacti
+              </Link>
             </li>
             <li>
-              <Link>our story</Link>
+              <Link to="story" onClick={() => setToggle(!toggle)}>
+                our story
+              </Link>
             </li>
             <li>
-              <Link>questions</Link>
+              <Link to="questions" onClick={() => setToggle(!toggle)}>
+                questions
+              </Link>
             </li>
           </ul>
         </div>

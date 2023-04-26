@@ -1,0 +1,109 @@
+@import "../../vendors/mixins";
+@import "../../vendors/variables";
+.cart {
+  padding: 30px 0px 50px;
+  .title {
+    @include flexCenter;
+    h1 {
+      font-weight: 100;
+      font-family: $second-font;
+      color: $black;
+      font-size: 55px;
+    }
+  }
+  .empty-text {
+    @include flexCenter;
+    text-align: center;
+    margin-top: 30px;
+    color: $main-gray;
+    font-size: 20px;
+    font-family: $font-family;
+    font-weight: 500;
+  }
+  .cart-content {
+    margin-top: 50px;
+    table {
+      width: 100%;
+      @media (max-width: 600px) {
+      }
+      tr {
+        text-align: center;
+
+        th {
+          background-color: $lightgray;
+          padding: 15px;
+          color: gray;
+          font-family: $font-family;
+          font-weight: 500;
+        }
+        td {
+          padding: 15px;
+          border-bottom: 1px solid lightgray;
+          color: $main-gray;
+          font-family: $font-family;
+          font-weight: 500;
+        }
+        .cancel {
+          font-weight: 900;
+          cursor: pointer;
+          &:hover {
+            color: rgb(212, 7, 7);
+          }
+        }
+        .count {
+          @include flexCenter;
+          gap: 15px;
+          button {
+            background-color: $white;
+            border: none;
+            font-weight: 500;
+            font-size: 20px;
+            color: $main-gray;
+          }
+        }
+      }
+    }
+    .checkout {
+      margin-top: 50px;
+      border: 1px solid lightgray;
+      width: 40%;
+      @media (max-width: 700px) {
+        width: 70%;
+      }
+      .heading {
+        background-color: $lightgray;
+        h3 {
+          padding: 15px;
+          color: $black;
+          font-family: $second-font;
+        }
+      }
+      .body {
+        padding: 15px;
+        .subtotal,
+        .total {
+          padding: 15px;
+          display: flex;
+          gap: 20px;
+          border-bottom: 1px solid lightgray;
+        }
+        .coupon {
+          padding: 15px;
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          button {
+            border: none;
+            background-color: $main-gray;
+            color: $white;
+            text-transform: uppercase;
+            padding: 15px;
+            font-family: $font-family;
+            letter-spacing: 1px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

@@ -3,7 +3,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 0px;
   .nav-link {
     @media (max-width: 918px) {
       display: none;
@@ -53,11 +52,12 @@ nav {
     .cart {
       position: relative;
       color: $main-gray;
+      margin-top: 17px;
       span {
         vertical-align: super;
         font-size: 10px;
         line-height: 0;
-        top: -0.8em;
+        top: 20px;
         right: -14px;
         color: $white;
         background: $main-gray;

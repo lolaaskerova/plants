@@ -4,10 +4,12 @@ import Products from "./products/Products";
 
 const Shop = () => {
   return (
-    <div style={{ padding: "60px 0px", borderTop: "1px solid lightgray" }}>
-      <ShopLink />
-      <Products />
-    </div>
+    <>
+      <div style={{ padding: "60px 0px", borderTop: "1px solid lightgray" }}>
+        <ShopLink />
+        <Products />
+      </div>
+    </>
   );
 };
 
